@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 500px;
+  padding: 10px 0px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+.datatable {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.datatable, .datatable td, .datatable th {
+  border-collapse: collapse;
+}
+
+.datatable td, .datatable th {
+  padding: 15px;
+  text-align: left;
+}
+
+.datatable th {
+  background-color: #331E38;
+  color: white;
+}
+
+.datatable tbody > tr {
+  border-bottom: 1px solid rgba(51, 30, 56, 0.8);
+}
+/*# sourceMappingURL=style.css.map */
