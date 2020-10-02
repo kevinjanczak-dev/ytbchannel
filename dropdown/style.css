@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 500px;
+  padding: 20px 0px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+.container-dd {
+  margin-top: 15px;
+  width: 250px;
+  position: relative;
+}
+
+.container-dd .display {
+  border: 1px solid #1D3461;
+  padding: 5px;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.container-dd .display .arrow {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #1D3461;
+  padding: 0 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container-dd .display .arrow .fas {
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+.container-dd #toggle-dd {
+  display: none;
+}
+
+.container-dd #toggle-dd:checked ~ .list-dd {
+  display: block;
+}
+
+.container-dd #toggle-dd:checked ~ .display .arrow .fas {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.container-dd .list-dd {
+  list-style: none;
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 5px;
+  -webkit-box-shadow: 0 0 5px 2px RGBA(0, 0, 0, 0.5);
+          box-shadow: 0 0 5px 2px RGBA(0, 0, 0, 0.5);
+}
+
+.container-dd .list-dd li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.container-dd .list-dd li:hover {
+  background-color: rgba(29, 52, 97, 0.5);
+}
+
+.container-dd .list-dd li.active {
+  background-color: #1D3461;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
