@@ -1,0 +1,62 @@
+.backdrop {
+    display: none;
+    position: fixed;
+    background-color: RGBA(0,0,0,0.5);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: center;
+
+    &.active {
+        display: flex;
+    }
+
+    .modal {
+        background-color: white;
+        width: 300px;
+
+        .modal-title {
+            display: flex;
+            align-items: center;
+            padding: 8px;
+            .text {
+                flex: 1;
+                text-align: left;
+                font-size: 1.3rem;
+            }
+
+            background-color: $default-color;
+        }
+
+        .modal-body {
+            padding: 10px;
+            #form-people {
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    border: none;
+                    width: 100%;
+                    margin: 7px 0px;
+
+                    .form-control {
+                        width: 100%;
+                        padding: 5px 3.5px;
+                        border-radius: 0px;
+                        outline: none;
+                        border: 1px solid black;
+
+                        &:focus {
+                            border: 1px solid $default-color;
+                        }
+                    }
+                }
+
+                .btn {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

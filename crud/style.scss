@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+$default-color: #32DE8A;
+$primary-color: #4F86C6;
+
+@import 'form-people';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+.container {
+    padding: 20px 0px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+
+
+.table {
+    width: 100%;
+
+    margin: 10px 0px;
+    &, td, th {
+        border-collapse: collapse;
+    }
+
+    td, th {
+        padding: 15px;
+        text-align: left;
+        white-space: nowrap;
+    }
+
+    th {
+        background-color: $default-color;
+    }
+
+    tbody > tr {
+        border-bottom: 1px solid $default-color;
+    }
+
+    tbody > tr > .actions {
+        a {
+            text-decoration: none;
+            color: black;
+            margin-right: 4px;
+        }
+    }
+}
+
+.btn {
+    border: none;
+    background-color: $primary-color;
+    padding: 10px;
+    border-radius: 3px;
+    outline: none;
+    transition: all 100ms;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($color: $primary-color, $amount: 20);
+    }
+
+    &.circle {
+        background-color: transparent;
+        font-size: 1.3rem;
+    }
+
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/aa5325d620.js" crossorigin="anonymous"></script>
+    <title>Crud</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Crud de Pessoas</h1>
+        <table class="table">
+            <thead><tr></tr></thead>
+            <tbody></tbody>
+        </table>
+        <button class="btn success open-modal">Adicionar</button>
+        <div class="backdrop">
+            <div class="modal">
+                <div class="modal-title">
+                    <span class="text">Formulario</span>
+                    <button class="btn circle close-modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-people">
+                        <fieldset class="form-group">
+                            <label for="name">Nome</label>
+                            <input class="form-control" name="name" id="name" type="text">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="email">Email</label>
+                            <input class="form-control" name="email" id="email" type="email">
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label for="cpf">CPF</label>
+                            <input class="form-control" name="cpf" id="cpf" type="text">
+                        </fieldset>
+                        <button class="btn success">Salvar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="form-people.js"></script>
+</body>
+</html>

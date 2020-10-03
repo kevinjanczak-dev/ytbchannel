@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+.backdrop {
+  display: none;
+  position: fixed;
+  background-color: RGBA(0, 0, 0, 0.5);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.backdrop.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.backdrop .modal {
+  background-color: white;
+  width: 300px;
+}
+
+.backdrop .modal .modal-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px;
+  background-color: #32DE8A;
+}
+
+.backdrop .modal .modal-title .text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+.backdrop .modal .modal-body {
+  padding: 10px;
+}
+
+.backdrop .modal .modal-body #form-people .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: none;
+  width: 100%;
+  margin: 7px 0px;
+}
+
+.backdrop .modal .modal-body #form-people .form-group .form-control {
+  width: 100%;
+  padding: 5px 3.5px;
+  border-radius: 0px;
+  outline: none;
+  border: 1px solid black;
+}
+
+.backdrop .modal .modal-body #form-people .form-group .form-control:focus {
+  border: 1px solid #32DE8A;
+}
+
+.backdrop .modal .modal-body #form-people .btn {
+  margin-top: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Roboto';
+}
+
+.container {
+  padding: 20px 0px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.table {
+  width: 100%;
+  margin: 10px 0px;
+}
+
+.table, .table td, .table th {
+  border-collapse: collapse;
+}
+
+.table td, .table th {
+  padding: 15px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.table th {
+  background-color: #32DE8A;
+}
+
+.table tbody > tr {
+  border-bottom: 1px solid #32DE8A;
+}
+
+.table tbody > tr > .actions a {
+  text-decoration: none;
+  color: black;
+  margin-right: 4px;
+}
+
+.btn {
+  border: none;
+  background-color: #4F86C6;
+  padding: 10px;
+  border-radius: 3px;
+  outline: none;
+  -webkit-transition: all 100ms;
+  transition: all 100ms;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #2b5484;
+}
+
+.btn.circle {
+  background-color: transparent;
+  font-size: 1.3rem;
+}
+/*# sourceMappingURL=style.css.map */
