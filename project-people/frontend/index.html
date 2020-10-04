@@ -4,16 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/aa5325d620.js" crossorigin="anonymous"></script>
     <title>Crud</title>
 </head>
 <body>
     <div class="container">
         <h1>Crud de Pessoas</h1>
-        <table class="table">
-            <thead><tr></tr></thead>
-            <tbody></tbody>
-        </table>
+        <div class="datatable">
+            <select class="limit-data">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+            <table class="table">
+                <thead><tr></tr></thead>
+                <tbody></tbody>
+            </table>
+            <div class="pagination">
+                <button class="btn circle first"><i class="fas fa-angle-double-left"></i></button>
+                <button class="btn circle back"><i class="fas fa-angle-left"></i></button>
+                <span class="page-state">
+                    Página 1 de 5
+                </span>
+                <button class="btn circle next"><i class="fas fa-angle-right"></i></button>
+                <button class="btn circle last"><i class="fas fa-angle-double-right"></i></button>
+            </div>
+        </div>
         <button class="btn success open-modal">Adicionar</button>
         <div class="backdrop">
             <div class="modal">
@@ -24,7 +42,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="form-people">
+                    <form id="form-people" novalidate>
                         <fieldset class="form-group">
                             <label for="name">Nome</label>
                             <input class="form-control" name="name" id="name" type="text">
@@ -35,7 +53,7 @@
                         </fieldset>
                         <fieldset class="form-group">
                             <label for="cpf">CPF</label>
-                            <input class="form-control" name="cpf" id="cpf" type="text">
+                            <input class="form-control" maxlength="11" name="cpf" id="cpf" type="text">
                         </fieldset>
                         <button class="btn success">Salvar</button>
                     </form>

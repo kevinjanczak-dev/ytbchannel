@@ -23,16 +23,33 @@ body {
 
 .container {
     padding: 20px 0px;
-    width: 500px;
+    max-width: 768px;
+    height: 100%;
     margin: 0 auto;
 }
 
+.datatable {
+    margin: 10px 0px;
 
+    .limit-data {
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    .pagination {
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .page-state {
+            margin: 0px 10px;
+        }
+    }
+}
 
 .table {
     width: 100%;
-
-    margin: 10px 0px;
     &, td, th {
         border-collapse: collapse;
     }

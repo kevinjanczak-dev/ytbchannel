@@ -23,7 +23,7 @@
 
 .backdrop .modal {
   background-color: white;
-  width: 300px;
+  width: 350px;
 }
 
 .backdrop .modal .modal-title {
@@ -78,6 +78,20 @@
   margin-top: 5px;
 }
 
+.backdrop .modal .modal-body #form-people .list-errors {
+  width: 100%;
+  margin-top: 5px;
+  border: 1px solid red;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.backdrop .modal .modal-body #form-people .list-errors li {
+  color: red;
+  list-style: none;
+  padding: 2px 0px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -96,13 +110,39 @@ body {
 
 .container {
   padding: 20px 0px;
-  width: 500px;
+  max-width: 768px;
+  height: 100%;
   margin: 0 auto;
+}
+
+.datatable {
+  margin: 10px 0px;
+}
+
+.datatable .limit-data {
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.datatable .pagination {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.datatable .pagination .page-state {
+  margin: 0px 10px;
 }
 
 .table {
   width: 100%;
-  margin: 10px 0px;
 }
 
 .table, .table td, .table th {

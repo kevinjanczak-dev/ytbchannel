@@ -15,7 +15,7 @@
 
     .modal {
         background-color: white;
-        width: 300px;
+        width: 350px;
 
         .modal-title {
             display: flex;
@@ -55,6 +55,19 @@
 
                 .btn {
                     margin-top: 5px;
+                }
+
+                .list-errors {
+                    width: 100%;
+                    margin-top: 5px;
+                    border: 1px solid red;
+                    border-radius: 3px;
+                    padding: 5px;
+                    li {
+                        color: red;
+                        list-style: none;
+                        padding: 2px 0px;
+                    }
                 }
             }
         }

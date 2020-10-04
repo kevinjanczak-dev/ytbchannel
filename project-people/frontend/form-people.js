@@ -2,31 +2,68 @@ const backdropEl = document.querySelector('.backdrop')
 const formPeopleEl = backdropEl.querySelector('#form-people')
 const btnCloseModalEl = backdropEl.querySelector('.close-modal')
 
+
+function clearErrors() {
+    const listErrorsEl = formPeopleEl.querySelector('.list-errors')
+    if(listErrorsEl) listErrorsEl.remove()
+}
+
+function addErrors(errors) {
+    if(errors.length > 0) {
+        const templateErrors = errors.map(error => (
+            `<li>${error}</li>`
+        ))
+
+        const listErrorsEl = document.createElement('ul')
+        listErrorsEl.classList.add('list-errors')
+
+        listErrorsEl.innerHTML = templateErrors.join('')
+
+        formPeopleEl.appendChild(listErrorsEl)
+    }
+
+}
+
 function closeModal() {
     backdropEl.classList.remove('active')
     formPeopleEl.name.value = ''
     formPeopleEl.email.value = ''
     formPeopleEl.cpf.value = ''
-    selectedIndex = null;
+    selectedId = null;
+    clearErrors();
 }
 
 btnCloseModalEl.addEventListener('click', ev => {
     closeModal()
 })
 
-formPeopleEl.addEventListener('submit', ev => {
+formPeopleEl.addEventListener('submit', async ev => {
     ev.preventDefault()
+
+    let errors = []
+    clearErrors()
     const people = {
+        id: selectedId,
         name: formPeopleEl.name.value,
         cpf: formPeopleEl.cpf.value,
         email: formPeopleEl.email.value
     }
-    if(Number.isInteger(selectedIndex))
-        rows.splice(selectedIndex, 1, people)
-    else 
-        rows.push(people)
-    renderRows()
-    closeModal()
+    if(Number.isInteger(selectedId)){
+        const response = await api.put(`/${selectedId}`, people, { validateStatus: false })
+        errors = response.data
+    }
+    else {
+        const response = await api.post('', people, { validateStatus: false })
+        errors = response.data
+    }
+    if(Array.isArray(errors)) {
+        addErrors(errors)
+    }
+    else {
+        renderRows()
+        closeModal()
+    }
+
 })
 
 
