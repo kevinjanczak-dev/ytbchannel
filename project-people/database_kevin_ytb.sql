@@ -1,0 +1,11 @@
+DROP DATABASE kevin_ytb;
+CREATE DATABASE kevin_ytb;
+
+USE kevin_ytb;
+
+CREATE TABLE peoples (
+	id INTEGER PRIMARY KEY AUTO_INCREMENT,
+	`name` VARCHAR(255),
+	email VARCHAR(255),
+	cpf CHAR(14) UNIQUE
+);
