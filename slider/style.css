@@ -1,0 +1,98 @@
+/*Import da fonte Roboto do google*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Reset de CSS*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Roboto", "Arial", sanf-serif;
+    background-color: #F4F4F4;
+}
+
+.container {
+    height: 100%;
+    padding: 30px;
+}
+
+/*Slider*/
+
+.slider-container {
+    height: 400px;
+    position: relative;
+    margin: 20px 0px;
+}
+
+.slider-container ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.slider-container .slides {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.slider-container .slides .slide {
+    width: 100%;
+    flex-shrink: 0;
+    color: white;
+    height: 100%;
+    font-size: 2.5rem;
+}
+
+.slide div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Pontos do Slider*/
+
+.slider-container .dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dots .dot {
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #FFF;
+    margin-left: 5px;
+}
+
+.dot.active {
+    background-color: #484349;
+}
+
+/*Navegação*/
+
+.slider-container .slider-navigation .nav {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    background-color: rgba(0,0,0,.5);
+    padding: 30px 15px;
+    color: #FFF;
+}
+
+.nav.left {
+    left: 0px;
+}
+
+.nav.right {
+    right: 0;
+}
